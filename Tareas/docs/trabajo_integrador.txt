@@ -1,0 +1,29 @@
+Un proyecto sin ánimo de lucro:
+-	Conexión en distinto lugares, por ejemplo de San Rafael a Mendoza:
+    o	Conexión de enlace, ya sea telefónica o otra empresa.
+    o	Usuarios identificándose mediante un nombre de usuario y clave.
+    o	Trabajar con active directory, con servidor de Windows. Utilizando una maquina principal, y diferentes computadoras conectando a esa máquina principal.
+    o	Vinculo entre ambos lugares, permanente. Contratando servicio con pocas caídas, y buscar una alternativa con menor velocidad, se pueda mantener. Contratando a la compañía, se recomienda tener separados en diferentes servidores, teniendo un file server conectado a un dominio y no sea el mismo servidor que tiene Active Directory, porque utiliza muchos recursos. Sino Linux con LDAP mas Samba
+    o	Utilizar VMWare o ProxMox, teniendo una instalación al equipo y generar servidores virtualmente, mas cómodo, que tener servidores físicos, porque es mas cómodo la administración y tiene la posibilidad de crear máquinas virtuales teniendo recursos suficientes y salvar en caso de que ocurra algo.
+    o	Armar un buen esquema de la IP de las redes internas según servidores y clientes. Teniendo Router, Switch, Switch Inteligentes como VPS, teniendo redes virtuales inteligentes, permitiendo aislar redes de otras, estableciendo diferentes niveles de seguridad, etc. Teniendo red IP interna en la empresa.
+    o	Hay que hacer un backup, para tener un mecanismo de recuperación ante un desastre.
+    o	A nivel de Software, hay que utilizar un Firewall que trabaje a nivel de Router, siendo el Router una caja negra, MicroTick o podemos tener un equipo Linux haciendo de router.
+    o	Antivirus en máquinas locales y un firewall de cortafuegos según donde entre el usuario y proxy para controlar navegación y actualizar sistema operativo, habilitar navegación y algún editado de archivo.
+    o	Mas fácil de acceder de manera física, pero lo menos expuestos. IDS, detección de introcción, puede ser simple, como teniendo algunas reglas de firewall que bloquee los intentos de acceso, teniendo determinado ataque y que esos ataques lo podamos anular. A través de router, son las primeras medidas para evitar ataques de ddos, conexiones externas, etc. No responder a protocolos de ping, pero si a protocolos http, que es donde se maneja el servidor. Y registrar los tipos de acceso que tenemos y almacenarlo en algún log y comparar con otros sitios parecidos, para determinar si es un ataque o no. No responder al ataque, sino que hay que evitarlo a toda costa.
+-	Conexión en la nube:
+    o	No se necesita un enlace entre ambos servidores, si ambos están en la nube, pero hay que tener conexión a internet.
+    o	Usuarios identificándose mediante un nombre de usuario y clave.
+    o	Trabajar con active directory, pero instalado en la nube.
+    o	Verificar que precio está en Google u otro servicio, según servidor y lo que se necesita. Contrata un solo sitio y generar un vinculo de mejor calidad para ambos servidores. Y acá hay que contratar según conexión a internet.
+    o	 Y pedir también un enlace dedicado, teniendo la misma velocidad de subida y de bajada. Pero garantizado al 100%
+    o	Enlace VoIP, para manejar la comunicación de la empresa mediante internet, ya que se pierde la velocidad.
+    o	Armar un buen esquema de la IP de las redes internas según servidores y clientes. Teniendo Router, Switch, Switch Inteligentes como VPS, teniendo redes virtuales inteligentes, permitiendo aislar redes de otras, estableciendo diferentes niveles de seguridad, etc. Teniendo red IP interna en la empresa.
+    o	Los BackUP a nivel de la nube ya lo tenemos resuelto.
+    o	En la nube se maneja mediante maquinas virtuales, en Argentina reside en Buenos Aires, baehost. Corriendo varias maquinas virtuales por servidores y además redes virtuales.
+    o	A nivel de Software, hay que utilizar un Firewall, teniendo del lado del router de la empresa hay que tener un tipo de Firewall y en la nube también.
+    o	Antivirus en máquinas locales y un firewall de cortafuegos según donde entre el usuario y proxy para controlar navegación y actualizar sistema operativo, habilitar navegación y algún editado de archivo.
+    o	Mas difíciles de acceder, pero lo mas expuestos, aunque tengan más herramientas de protecciones.
+    o	En el caso de la nube, cuando contrata, es la mas básica, con determinadas condiciones, teniendo un costo. En la nube se paga tráfico, por lo que a mayor tráfico mayor pago.
+Necesitamos un servicio de identificación de usuario y un ORP que funciona sobre una base de datos, teniendo un servidor web donde funciona el ORP y una base de datos por donde funciona el servidor.
+Ir poniendo nombre y determinar porque elegimos cada cosa, como por ejemplo, porque elegir Windows y no Linux para el manejo de los servidores. Cualquier duda consultar al profe.
+Seguridad informática, solo en los aspectos técnicos, luego los procedimientos y lo que haría falta para manejar el sistema de ese sitio.
