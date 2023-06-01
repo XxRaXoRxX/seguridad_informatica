@@ -7,7 +7,7 @@ def main():
     key = input("Ingrese la clave: ")
 
     # Pedimos el texto a cifrar
-    text = input("Ingrese el texto a cifrar: ")
+    text = input("Ingrese texto: ")
 
     while True:
         # Indicamos si queremos cifrar o descifrar
@@ -23,8 +23,6 @@ def main():
             break
         else:
             print("Opción incorrecta")
-
-
 
 def operate(text, key, alphabet, option):
     # Definimos la lista de caracteres
